@@ -1,0 +1,120 @@
+:root {
+  --red: #FF0000;
+  --green: #00FF00;
+  --blue: #0000FF;
+  --nav-neutral: #CCCCCC;
+  --white: #FFFFFF;
+  --gray: #F0F0F0;
+  --black: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lexend Mega', sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--green);
+  color: var(--black);
+  padding: 1rem;
+  border-bottom: 8px solid var(--black);
+  box-shadow: 8px 8px 0 var(--black);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: var(--nav-neutral);
+  border-bottom: 8px solid var(--black);
+  box-shadow: 8px 8px 0 var(--black);
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  border: 4px solid var(--black);
+  padding: 0.5rem 1.5rem;
+  background-color: var(--blue);
+  box-shadow: 4px 4px 0 var(--black);
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  transition: filter 0.1s ease-out;
+}
+
+nav a:hover {
+  filter: brightness(85%);
+}
+
+nav a:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--black);
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: var(--gray);
+  border-top: 8px solid var(--black);
+  border-bottom: 8px solid var(--black);
+}
+
+section.post {
+  background-color: var(--white);
+  padding: 1rem;
+  border: 6px solid var(--black);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+section.post h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+section.post p {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.image-frame {
+  display: block;
+  max-width: 100%;
+  margin: 1rem auto;
+  border: 8px solid var(--black);
+  box-shadow: 12px 12px 0 var(--black);
+  background-color: var(--white);
+  padding: 0.5rem;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 8px solid var(--blue);
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
