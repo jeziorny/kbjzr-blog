@@ -18,6 +18,20 @@ body {
   min-height: 100vh;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.post {
+  width: 100%;
+}
+
 header {
   background-color: var(--green);
   color: var(--black);
@@ -60,14 +74,23 @@ nav a:active {
   box-shadow: 0 0 0 var(--black);
 }
 
-main {
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+.main-bg {
   background-color: var(--gray);
   border-top: 8px solid var(--black);
   border-bottom: 8px solid var(--black);
+  padding: 2rem 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: none;
+  border: none;
 }
 
 section.post {
