@@ -1,91 +1,54 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>kbjzr</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kbjzr.pl</title>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@700&family=Archivo+Black&family=Public+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>kbjzr</header>
+  <header>
+    kbjzr.pl — Blog o Rzeczach
+  </header>
 
   <nav>
-    <a href="index.html">Blog</a>
-    <a href="about.html">O mnie</a>
+    <a href="#">Start</a>
+    <a href="#">O mnie</a>
+    <a href="#">Artykuły</a>
+    <a href="#">Kontakt</a>
   </nav>
 
   <main>
-    <div id="post-list"></div>
-  </main>
+  <div id="post-list" style="display: flex; flex-direction: column; gap: 2rem; max-width: 720px; width: 100%;"></div>
+  <div id="post-list" class="container"></div>
+</main>
+
+
 
   <footer>
     &copy; 2025 kbjzr.pl — Wszystkie prawa zastrzeżone
   </footer>
+<script>
+  fetch('posts.json')
+    .then(res => res.json())
+    .then(posts => {
+      const container = document.getElementById('post-list');
+      posts.forEach(post => {
+        const section = document.createElement('section');
+        section.className = 'post';
 
-  <script>
-    const posts = [
-      {
-        text: "Screenless i hardware jako Klient AI. O Humane AI Pin.",
-        href: "posts/screenless-i-hardware-jako-klient-ai-o-humane-ai-pin.html"
-      },
-      {
-        text: "Influencer marketing to loteria.",
-        href: "posts/influencer-marketing-to-loteria.html"
-      },
-      {
-        text: "Apple Vision Pro – szybkie refleksje.",
-        href: "posts/apple-vision-pro.html"
-      },
-      {
-        text: "AI in the box: okulary od Meta",
-        href: "posts/meta-ray-bans.html"
-      },
-      {
-        text: "Blogi, tęsknię za nimi",
-        href: "posts/blogi-tesknie-za-nimi.html"
-      },
-      {
-        text: "Push i pull w zarządzaniu produktem",
-        href: "posts/push-i-pull-w-zarzadzaniu-produktem.html"
-      }
-    ];
+        const a = document.createElement('a');
+        a.href = post.href;
+        a.textContent = post.title;
+        a.style.textDecoration = 'none';
+        a.style.fontWeight = 'bold';
 
-    const postList = document.getElementById('post-list');
-    let loaded = 0;
-    const batchSize = 2;
-
-    function renderPost(post) {
-      const section = document.createElement('section');
-      section.className = 'post';
-
-      const a = document.createElement('a');
-      a.href = post.href;
-      a.textContent = post.text;
-      a.style.fontWeight = 'bold';
-      a.style.textDecoration = 'none';
-
-      const p = document.createElement('p');
-      p.appendChild(a);
-
-      section.appendChild(p);
-      postList.appendChild(section);
-    }
-
-    function loadNextPosts() {
-      const next = posts.slice(loaded, loaded + batchSize);
-      next.forEach(renderPost);
-      loaded += next.length;
-    }
-
-    window.addEventListener('scroll', () => {
-      const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
-      if (nearBottom && loaded < posts.length) {
-        loadNextPosts();
-      }
+        section.appendChild(a);
+        container.appendChild(section);
+      });
     });
-
-    loadNextPosts();
-  </script>
+</script>
 </body>
 </html>
