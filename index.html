@@ -6,15 +6,109 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Archivo+Black&family=Public+Sans&display=swap" rel="stylesheet">
+<style>
+/* Layout for main content and sidebar */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .content-wrapper { flex-direction: column; }
+  .neo-profile { margin-left: 0; margin-right: 0; width: 100%; max-width: 340px; }
+}
+
+.neo-profile {
+  width: 280px;
+  background: #eee;
+  border: 4px solid black;
+  padding: 12px;
+  font-family: 'Arial Black', sans-serif;
+  color: black;
+  margin: 16px;
+  box-shadow: 6px 6px 0 black;
+}
+
+.neo-profile-header {
+  background: #00ff66;
+  padding: 8px;
+  text-align: center;
+  border: 2px solid black;
+  margin-bottom: 12px;
+}
+
+.neo-name {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.neo-role {
+  display: block;
+  font-size: 13px;
+  color: #333;
+  margin-top: 4px;
+}
+
+.neo-section {
+  font-size: 13px;
+  line-height: 1.4;
+  border: 2px solid black;
+  background: white;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.neo-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.neo-btn {
+  text-decoration: none;
+  color: white;
+  background: blue;
+  text-align: center;
+  font-size: 14px;
+  padding: 6px;
+  border: 2px solid black;
+  transition: all 0.1s ease-in-out;
+}
+
+.neo-btn:hover {
+  background: black;
+  color: lime;
+}
+
+.main-title {
+  font-family: 'Archivo Black', 'Lexend Mega', Arial Black, sans-serif;
+  font-weight: bold;
+  font-size: 2.3rem;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  margin: 18px 0 12px 0;
+  transition: color 0.15s;
+}
+.main-title:hover, .main-title:active, .main-title:focus {
+  color: black;
+  text-decoration: none;
+}
+</style>
+
 </head>
 <body>
-  <header>kbjzr</header>
+  <header><a class="main-title" href="index.html">kbjzr</a></header>
   <nav>
     <a href="index.html">Blog</a>
     <a href="about.html">O mnie</a>
   </nav>
   <div class="main-bg">
-    <main>
+    <div class="content-wrapper">
+      <main>
     
     <section class="post">
       <h2><a href="posts/pilnosc.html">Pilność</a></h2>
@@ -69,7 +163,26 @@
     </section>
     
     </main>
-  </div>
+
+      <!-- PROFIL: Neobrutalistyczna ramka boczna -->
+      <div class="neo-profile">
+        <div class="neo-profile-header">
+          <span class="neo-name">JAKUB JEZIORNY</span>
+          <span class="neo-role">COO @ GRUPA BLIX</span>
+        </div>
+        <div class="neo-section">
+          <p>📍 Poznań, PL</p>
+          <p>👥 13 478 followers</p>
+          <p>🎓 AE Poznań</p>
+          <p>🧠 Tech / Growth / Media</p>
+        </div>
+        <div class="neo-buttons">
+          <a href="#" class="neo-btn">CV</a>
+          <a href="#" class="neo-btn">Portfolio</a>
+          <a href="#" class="neo-btn">Kontakt</a>
+        </div>
+      </div>
+    </div>
   <footer>© 2025 kbjzr.pl</footer>
 </body>
 </html>
