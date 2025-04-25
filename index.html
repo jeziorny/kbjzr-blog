@@ -104,7 +104,53 @@
 
 </head>
 <body>
-  <header><a class="main-title" href="index.html">kbjzr</a></header>
+  <header>
+    <a class="main-title" href="index.html">kbjzr</a>
+    <!-- Sticky Bar pod headerem -->
+<div id="newsletter-bar" style="
+width: 100%;
+background: black;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+font-family: sans-serif;
+font-weight: bold;
+font-size: 1rem;
+position: sticky;
+top: 0;
+z-index: 999;
+border-bottom: 2px solid white;
+">
+<form action="https://app.convertkit.com/forms/7968392/subscriptions" method="post" style="
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+">
+  <span style="margin-right: 0.5rem;">Zapisz się na posty na maila</span>
+  <input type="email" name="email_address" required placeholder="Twój email" style="
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border: 2px solid white;
+    background: white;
+    color: black;
+    font-weight: bold;
+  ">
+  <button type="submit" style="
+    padding: 0.4rem 1rem;
+    background: #00ff00;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+  ">Zapisz się</button>
+</form>
+</div>
+  </header>
   <nav>
     <a href="index.html">Blog</a>
     <a href="about.html">O mnie</a>
@@ -186,5 +232,6 @@
     </div> <!-- end neo-profile -->
     </div> <!-- end content-wrapper -->
   <footer>© 2025 kbjzr.pl</footer>
+  
 </body>
 </html>
