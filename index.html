@@ -1,248 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <title>kbjzr</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Archivo+Black&family=Public+Sans&display=swap" rel="stylesheet">
-<style>
-/* Layout for main content and sidebar */
-.content-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 32px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-@media (max-width: 900px) {
-  .content-wrapper { flex-direction: column; }
-  .neo-profile { margin-left: 0; margin-right: 0; width: 100%; max-width: 340px; }
-}
-
-.neo-profile {
-  width: 280px;
-  background: #eee;
-  border: 4px solid black;
-  padding: 12px;
-  font-family: 'Arial Black', sans-serif;
-  color: black;
-  margin: 16px;
-  box-shadow: 6px 6px 0 black;
-}
-
-.neo-profile-header {
-  background: #00ff66;
-  padding: 8px;
-  text-align: center;
-  border: 2px solid black;
-  margin-bottom: 12px;
-}
-
-.neo-name {
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.neo-role {
-  display: block;
-  font-size: 13px;
-  color: #333;
-  margin-top: 4px;
-}
-
-.neo-section {
-  font-size: 13px;
-  line-height: 1.4;
-  border: 2px solid black;
-  background: white;
-  padding: 8px;
-  margin-bottom: 12px;
-}
-
-.neo-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.neo-btn {
-  text-decoration: none;
-  color: white;
-  background: blue;
-  text-align: center;
-  font-size: 14px;
-  padding: 6px;
-  border: 2px solid black;
-  transition: all 0.1s ease-in-out;
-}
-
-.neo-btn:hover {
-  background: black;
-  color: lime;
-}
-
-.main-title {
-  font-family: 'Archivo Black', 'Lexend Mega', Arial Black, sans-serif;
-  font-weight: bold;
-  font-size: 2.3rem;
-  color: black;
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  display: inline-block;
-  margin: 18px 0 12px 0;
-  transition: color 0.15s;
-}
-.main-title:hover, .main-title:active, .main-title:focus {
-  color: black;
-  text-decoration: none;
-}
-
-.post h2 a {
-  font-family: 'Archivo Black', 'Lexend Mega', Arial Black, sans-serif;
-  text-decoration: none;
-  color: var(--blue);
-  transition: color 0.15s;
-}
-.post h2 a:hover, .post h2 a:focus, .post h2 a:active {
-  color: #00ff66;
-  text-decoration: none;
-}
-</style>
-
-</head>
-<body>
-  <header>
-    <a class="main-title" href="index.html">kbjzr</a>
-    <!-- Sticky Bar pod headerem -->
-<div id="newsletter-bar" style="
-width: 100%;
-background: black;
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 1rem;
-font-family: sans-serif;
-font-weight: bold;
-font-size: 1rem;
-position: sticky;
-top: 0;
-z-index: 999;
-border-bottom: 2px solid white;
-">
-<form action="https://app.convertkit.com/forms/7968392/subscriptions" method="post" style="
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  max-width: 100%;
-">
-  <span style="margin-right: 0.5rem;">Zapisz się na posty na maila</span>
-  <input type="email" name="email_address" required placeholder="Twój email" style="
-    padding: 0.4rem 0.6rem;
-    font-size: 1rem;
-    border: 2px solid white;
-    background: white;
-    color: black;
-    font-weight: bold;
-  ">
-  <button type="submit" style="
-    padding: 0.4rem 1rem;
-    background: #00ff00;
-    border: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-  ">Zapisz się</button>
-</form>
-</div>
-  </header>
-  <nav>
-    <a href="index.html">Blog</a>
-    <a href="about.html">O mnie</a>
-  </nav>
-  <div class="main-bg">
-    <div class="content-wrapper">
-      <main>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <section class="post">
-      <h2><a href="posts/pilnosc.html">Pilność</a></h2>
-    </section>
+    <!-- SEO Meta Tags -->
+    <title>KBJZR - Blog o technologii, produktach i biznesie</title>
+    <meta name="description" content="Blog Jakuba Jeziorniskiego - COO Grupy Blix. Pisz臋 o zarz膮dzaniu produktem, technologii, AI i biznesie. Rozw贸j produktu i zespo艂u w startupach." />
+    <meta name="keywords" content="zarz膮dzanie produktem, technologia, AI, startup, biznes, Jakub Jeziorny, product management, Blix" />
+    <meta name="author" content="Jakub Jeziorny" />
     
-    <section class="post">
-      <h2><a href="posts/prymat-dzialania-nad-intelektem-inteligencja-znaczy-mniej-niz-myslisz.html">Prymat działania nad intelektem: inteligencja znaczy mniej niż myślisz</a></h2>
-    </section>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kbjzr.pl/" />
+    <meta property="og:title" content="KBJZR - Blog o technologii, produktach i biznesie" />
+    <meta property="og:description" content="Blog Jakuba Jeziorniskiego - COO Grupy Blix. Pisz臋 o zarz膮dzaniu produktem, technologii, AI i biznesie." />
+    <meta property="og:image" content="https://kbjzr.pl/og-image.jpg" />
+    <meta property="og:site_name" content="KBJZR" />
+    <meta property="og:locale" content="pl_PL" />
     
-    <section class="post">
-      <h2><a href="posts/push-i-pull-w-zarzadzaniu-produktem.html">Push i pull w zarządzaniu produktem</a></h2>
-    </section>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kbjzr.pl/" />
+    <meta property="twitter:title" content="KBJZR - Blog o technologii, produktach i biznesie" />
+    <meta property="twitter:description" content="Blog Jakuba Jeziorniskiego - COO Grupy Blix. Pisz臋 o zarz膮dzaniu produktem, technologii, AI i biznesie." />
+    <meta property="twitter:image" content="https://kbjzr.pl/og-image.jpg" />
     
-    <section class="post">
-      <h2><a href="posts/blogi-tesknie-za-nimi.html">Blogi, tęsknię za nimi</a></h2>
-    </section>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kbjzr.pl/" />
     
-    <section class="post">
-      <h2><a href="posts/meta-ray-bans.html">AI in The Box: okulary od Meta</a></h2>
-    </section>
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
-    <section class="post">
-      <h2><a href="posts/apple-vision-pro.html">Apple Vision Pro</a></h2>
-    </section>
+    <!-- Google Fonts - Optimized loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     
-    <section class="post">
-      <h2><a href="posts/influencer-marketing-to-loteria.html">Influencer marketing to loteria</a></h2>
-    </section>
+    <!-- ConvertKit -->
+    <meta name="ck-version" content="7">
     
-    <section class="post">
-      <h2><a href="posts/screenless-i-hardware-jako-klient-ai-o-humane-ai-pin.html">Screenless i hardware jako klient AI. O Humane AI Pin.</a></h2>
-    </section>
+    <!-- Structured Data for AI/Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "KBJZR",
+      "description": "Blog o technologii, zarz膮dzaniu produktem i biznesie",
+      "url": "https://kbjzr.pl",
+      "author": {
+        "@type": "Person",
+        "name": "Jakub Jeziorny",
+        "jobTitle": "COO",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Grupa Blix"
+        },
+        "url": "https://kbjzr.pl",
+        "sameAs": [
+          "https://www.linkedin.com/in/jakubje/"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jakub Jeziorny"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kbjzr.pl"
+      },
+      "inLanguage": "pl-PL"
+    }
+    </script>
     
-    <section class="post">
-      <h2><a href="posts/10-lekcji-z-treningu-silowego.html">10 lekcji z treningu siłowego</a></h2>
-    </section>
-    
-    <section class="post">
-      <h2><a href="posts/cytaty-charliego-mungera-po-polsku.html">102 cytaty Charliego Mungera po polsku</a></h2>
-    </section>
-    
-    <section class="post">
-      <h2><a href="posts/tak-zwany-europejski-pesymizm-w-technologii.html">Tak zwany "europejski pesymizm" w technologii.</a></h2>
-    </section>
-    
-    <section class="post">
-      <h2><a href="posts/chcesz-wygrac-czy-byc-madrzejszy.html">Chcesz wygrać czy być mądrzejszy?</a></h2>
-    </section>
-    
-    <section class="post">
-      <h2><a href="posts/zarzadzanie-produktem-startup-vs-duza-organizacja.html">Zarządzanie produktem: startup vs. duża organizacja</a></h2>
-    </section>
-    
-    </main>
-
-    <div class="content-wrapper">
-      <!-- PROFIL: Neobrutalistyczna ramka boczna -->
-      <div class="neo-profile">
-        <div class="neo-profile-header">
-          <span class="neo-name">JAKUB JEZIORNY</span>
-          <span class="neo-role">COO @ GRUPA BLIX</span>
-        </div>
-        <div class="neo-section">
-          <p>COO w Grupie Blix. Od 14 lat rozwijam produkty, zespoły i biznesy technologiczne. Historyk i filozof z Poznania.</p>
-        </div>
-        <div class="neo-buttons">
-          <a href="#" class="neo-btn">LinkedIn</a>
-          <a href="https://open.spotify.com/show/6jBsm4cYYgp144hpuLvBe9?si=ef5dcf9ca79744c2" class="neo-btn" target="_blank" rel="noopener">Podcast</a>
-          <a href="mailto:jakub.jeziorny@gmail.com" class="neo-btn">Kontakt</a>
-        </div>
-      </div>
-    </div> <!-- end neo-profile -->
-    </div> <!-- end content-wrapper -->
-  <footer>© 2025 kbjzr.pl</footer>
-  
-</body>
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//app.convertkit.com">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

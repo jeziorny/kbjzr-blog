@@ -1,0 +1,134 @@
+{
+  "posts": [
+    {
+      "id": "pilnosc",
+      "title": "Pilność",
+      "slug": "pilnosc",
+      "date": "2024-01-15",
+      "excerpt": "O tym, dlaczego pilność może być pułapką i jak znajdować właściwe priorytety.",
+      "tags": ["zarządzanie", "produktywność", "leadership"],
+      "featured": true,
+      "file": "posts/pilnosc.md"
+    },
+    {
+      "id": "prymat-dzialania-nad-intelektem-inteligencja-znaczy-mniej-niz-myslisz",
+      "title": "Prymat działania nad intelektem: inteligencja znaczy mniej niż myślisz",
+      "slug": "prymat-dzialania-nad-intelektem-inteligencja-znaczy-mniej-niz-myslisz",
+      "date": "2024-01-10",
+      "excerpt": "Dlaczego konsekwentne działanie przeważa nad inteligencją w osiąganiu celów.",
+      "tags": ["produktywność", "mindset", "rozwój"],
+      "featured": false,
+      "file": "posts/prymat-dzialania-nad-intelektem-inteligencja-znaczy-mniej-niz-myslisz.md"
+    },
+    {
+      "id": "push-i-pull-w-zarzadzaniu-produktem",
+      "title": "Push i pull w zarządzaniu produktem",
+      "slug": "push-i-pull-w-zarzadzaniu-produktem",
+      "date": "2024-01-05",
+      "excerpt": "Dwa fundamentalne podejścia do zarządzania produktem i kiedy je stosować.",
+      "tags": ["product management", "strategia", "zespół"],
+      "featured": false,
+      "file": "posts/push-i-pull-w-zarzadzaniu-produktem.md"
+    },
+    {
+      "id": "blogi-tesknie-za-nimi",
+      "title": "Blogi, tęsknię za nimi",
+      "slug": "blogi-tesknie-za-nimi",
+      "date": "2023-12-20",
+      "excerpt": "Refleksja o upadku blogowania i powrocie do osobistego pisania.",
+      "tags": ["blogging", "refleksje", "internet"],
+      "featured": false,
+      "file": "posts/blogi-tesknie-za-nimi.md"
+    },
+    {
+      "id": "meta-ray-bans",
+      "title": "AI in The Box: okulary od Meta",
+      "slug": "meta-ray-bans",
+      "date": "2023-12-15",
+      "excerpt": "Analiza okularów Meta Ray-Ban jako przykładu udanego produktu AI.",
+      "tags": ["AI", "technologia", "produkty"],
+      "featured": false,
+      "file": "posts/meta-ray-bans.md"
+    },
+    {
+      "id": "apple-vision-pro",
+      "title": "Apple Vision Pro",
+      "slug": "apple-vision-pro",
+      "date": "2023-12-10",
+      "excerpt": "Pierwsze wrażenia z najnowszego produktu Apple i przyszłość AR/VR.",
+      "tags": ["Apple", "AR/VR", "technologia"],
+      "featured": false,
+      "file": "posts/apple-vision-pro.md"
+    },
+    {
+      "id": "influencer-marketing-to-loteria",
+      "title": "Influencer marketing to loteria",
+      "slug": "influencer-marketing-to-loteria",
+      "date": "2023-12-05",
+      "excerpt": "Dlaczego influencer marketing jest nieprzewidywalny i jak z tym radzić.",
+      "tags": ["marketing", "biznes", "strategia"],
+      "featured": false,
+      "file": "posts/influencer-marketing-to-loteria.md"
+    },
+    {
+      "id": "screenless-i-hardware-jako-klient-ai-o-humane-ai-pin",
+      "title": "Screenless i hardware jako klient AI. O Humane AI Pin.",
+      "slug": "screenless-i-hardware-jako-klient-ai-o-humane-ai-pin",
+      "date": "2023-11-25",
+      "excerpt": "Analiza Humane AI Pin i przyszłości urządzeń bez ekranów.",
+      "tags": ["AI", "hardware", "przyszłość"],
+      "featured": false,
+      "file": "posts/screenless-i-hardware-jako-klient-ai-o-humane-ai-pin.md"
+    },
+    {
+      "id": "10-lekcji-z-treningu-silowego",
+      "title": "10 lekcji z treningu siłowego",
+      "slug": "10-lekcji-z-treningu-silowego",
+      "date": "2023-11-20",
+      "excerpt": "Czego nauczył mnie trening siłowy o konsekwencji, cierpliwości i wytrwałości.",
+      "tags": ["rozwój osobisty", "sport", "lekcje"],
+      "featured": false,
+      "file": "posts/10-lekcji-z-treningu-silowego.md"
+    },
+    {
+      "id": "cytaty-charliego-mungera-po-polsku",
+      "title": "102 cytaty Charliego Mungera po polsku",
+      "slug": "cytaty-charliego-mungera-po-polsku",
+      "date": "2023-11-15",
+      "excerpt": "Najlepsze cytaty Charliego Mungera przetłumaczone na język polski.",
+      "tags": ["cytaty", "biznes", "inwestowanie"],
+      "featured": false,
+      "file": "posts/cytaty-charliego-mungera-po-polsku.md"
+    },
+    {
+      "id": "tak-zwany-europejski-pesymizm-w-technologii",
+      "title": "Tak zwany \"europejski pesymizm\" w technologii",
+      "slug": "tak-zwany-europejski-pesymizm-w-technologii",
+      "date": "2023-11-10",
+      "excerpt": "O różnicach w podejściu do technologii między Europą a Stanami Zjednoczonymi.",
+      "tags": ["technologia", "Europa", "kulturowe"],
+      "featured": false,
+      "file": "posts/tak-zwany-europejski-pesymizm-w-technologii.md"
+    },
+    {
+      "id": "chcesz-wygrac-czy-byc-madrzejszy",
+      "title": "Chcesz wygrać czy być mądrzejszy?",
+      "slug": "chcesz-wygrac-czy-byc-madrzejszy",
+      "date": "2023-11-05",
+      "excerpt": "O dylemacie między konkurowaniem a uczeniem się w biznesie.",
+      "tags": ["biznes", "rozwój", "strategia"],
+      "featured": false,
+      "file": "posts/chcesz-wygrac-czy-byc-madrzejszy.md"
+    },
+    {
+      "id": "zarzadzanie-produktem-startup-vs-duza-organizacja",
+      "title": "Zarządzanie produktem: startup vs. duża organizacja",
+      "slug": "zarzadzanie-produktem-startup-vs-duza-organizacja",
+      "date": "2023-11-01",
+      "excerpt": "Kluczowe różnice w zarządzaniu produktem w startupach i dużych firmach.",
+      "tags": ["product management", "startup", "organizacja"],
+      "featured": false,
+      "file": "posts/zarzadzanie-produktem-startup-vs-duza-organizacja.md"
+    }
+  ]
+}
