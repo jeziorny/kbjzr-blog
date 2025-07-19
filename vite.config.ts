@@ -28,6 +28,11 @@ export default defineConfig(({ mode }) => ({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
         },
+        // Use legacy format for better GitHub Pages compatibility
+        format: 'es',
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       },
     },
   },
