@@ -118,7 +118,7 @@ export default {
 				'brutal-glow': 'var(--shadow-glow)'
 			},
 			fontFamily: {
-				'brutal': ['Space Grotesk', 'system-ui', 'sans-serif']
+				'brutal': ['Space Grotesk', 'Inter', 'Arial Black', 'system-ui', 'sans-serif']
 			}
 		}
 	},
