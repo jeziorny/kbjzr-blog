@@ -1,3 +1,7 @@
+---
+title: "Zarządzanie produktem: startup vs. duża organizacja"
+date: "2024-07-27T10:00:00.000Z"
+---
 # Zarządzanie produktem: startup vs. duża organizacja
 
 ### Startup:

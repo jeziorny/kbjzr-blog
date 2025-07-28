@@ -1,3 +1,7 @@
+---
+title: "Apple Vision Pro"
+date: "2024-07-27T10:00:00.000Z"
+---
 # Apple Vision Pro
 
 Kilka szybkich refleksji po [prezentacji](https://www.youtube.com/watch?v=TX9qSaGXFyg) [Apple Vision Pro](https://www.apple.com/apple-vision-pro/):
@@ -10,7 +14,7 @@ Kilka szybkich refleksji po [prezentacji](https://www.youtube.com/watch?v=TX9qSa
 
 4. Brak kontrolerów: Apple znów to zrobiło i użyło możliwie najnaturalniejszego interfejsu - tym razem to ruch gałek ocznych i ruchy dłoni.
 
-5. Gaming nie jest *driver use casem*. Zobaczyliśmy komunikację, pracę (Excel!), filmy, fotografię, social. Adresowanie wielu scenariuszów użycia naraz to także bardzo applowskie podejście.
+5. Gaming nie jest *driver use casem*. Zobaczyliśmy komunikację, pracę (Excel!), filmy, fotografię, social. Adresowanie wielu scenariuszy użycia naraz to także bardzo applowskie podejście.
 
 6. Ani *metawersum*, ani VR, tylko „spatial computing" - Vision Pro nie przenosi do zupełnie nowego miejsca, tylko wzbogaca naturalne otoczenie o interakcje z oprogramowaniem. Nie immersja z gier, tylko lepszy interfejs niż komputer.
 

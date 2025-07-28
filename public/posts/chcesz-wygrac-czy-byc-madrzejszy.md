@@ -1,3 +1,7 @@
+---
+title: "Chcesz wygrać czy być mądrzejszy?"
+date: "2024-07-27T10:00:00.000Z"
+---
 # Chcesz wygrać czy być mądrzejszy?
 
 Wraz z rosnącym korpusem doświadczeń i wiedzy o tym jak robić biznes (technologiczny czy nie), rośnie też tendencja, żeby intelektualizować tę domenę.

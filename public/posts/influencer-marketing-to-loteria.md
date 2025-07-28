@@ -1,3 +1,7 @@
+---
+title: "Influencer marketing to loteria"
+date: "2024-07-27T10:00:00.000Z"
+---
 # Influencer marketing to loteria
 
 Każdy influencer jest jak los na loterii.
@@ -32,7 +36,7 @@ Tracisz kontrolę nad zasięgami, nad contentem (czy kreacją), znaczną częśc
 
 Zasięgi influencera zależą od kanału, w którym pracuje *oraz* od jakości treści względem audytorium i algorytmów platformy.
 
-Nie kontrolujesz żadnej z tych zmiennych bo nie znasz audytorium ani algosów. (Gdybyś znał nie potrzebowałbyś influencera, nie?). Nie zaprogramujesz więc zasięgów ani targetowania. W ten sposób wprowadzasz pierwsze dwa ryzyka do swojej kampanii: ryzyko trafnego targetowania i ryzyko przewidywalnego zasięgu.
+Nie kontrolujesz żadnej z tych zmiennych bo nie znasz audytorium ani algosów. (Gdybyś znał nie potrzebowałbyś influencera, nie?). W ten sposób wprowadzasz pierwsze dwa ryzyka do swojej kampanii: ryzyko trafnego targetowania i ryzyko przewidywalnego zasięgu.
 
 Jeśli narzucisz twórcy swój content *de facto* tracisz jeden z najważniejszych atutów influencera - jego *content-audience fit*.
 
@@ -52,7 +56,7 @@ Nawet jeśli kampania z jednym influencerem działa i masz co do tego pewność 
 
 W większości przypadków możesz dopalić treść *paidem,* żeby dobudować zasięg. Śmieszne, ale *content* od influencera nierzadko ma krótszy cykl życia od porządnej kreacji w *paidzie*. Więc dopalenie jej nie będzie tak skuteczne jak emisja kampanii adsowej.
 
-Nie masz kontroli nad: zasięgiem, targetowaniem, treścią i jej skutecznością, mierzalnością, skalowalnością i powtarzalnością.
+Nie masz kontroli nad: zasięgiem, targetowaniem, treścią i jej skutecznością, mierzalnością i skalowalnością i powtarzalnością.
 
 Ajć.
 

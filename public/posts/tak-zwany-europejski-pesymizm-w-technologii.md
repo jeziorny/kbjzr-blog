@@ -1,3 +1,7 @@
+---
+title: "Tak zwany \"europejski pesymizm\" w technologii."
+date: "2024-07-27T10:00:00.000Z"
+---
 # Tak zwany "europejski pesymizm" w technologii.
 
 Za oceanem jest taka śmieszna moda, żeby nabijać się z głupich Europejczyków, że nic nie wytwarzają a z innowacji to mają regulacje innowacji (hehe).

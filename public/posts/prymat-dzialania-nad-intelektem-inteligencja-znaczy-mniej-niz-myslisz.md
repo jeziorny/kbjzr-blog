@@ -1,3 +1,7 @@
+---
+title: "Prymat działania nad intelektem: inteligencja znaczy mniej niż myślisz"
+date: "2024-07-27T10:00:00.000Z"
+---
 # Prymat działania nad intelektem: inteligencja znaczy mniej niż myślisz
 
 W panteonie ludzkich cnót intelekt jest często czczony jako szczyt człowieczych osiągnięć. 

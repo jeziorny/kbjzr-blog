@@ -1,3 +1,7 @@
+---
+title: "AI in The Box: okulary od Meta"
+date: "2024-07-27T10:00:00.000Z"
+---
 # AI in The Box: okulary od Meta
 
 Zuck na konferencji dla developerów Meta Connect pokazał nowe gogle [Quest 3](https://about.fb.com/news/2023/09/meet-meta-quest-3-mixed-reality-headset/) (po sporej podwyżce, od teraz także o *mixed reality* jak [te od Apple](/apple-vision-pro/)), ale dla mnie ciekawsze było co innego:

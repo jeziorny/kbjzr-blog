@@ -1,3 +1,7 @@
+---
+title: "Screenless i hardware jako klient AI. O Humane AI Pin."
+date: "2024-07-27T10:00:00.000Z"
+---
 # Screenless i hardware jako klient AI. O Humane AI Pin.
 
 > *There are only two ways to make money in business: one is to bundle; the other is unbundle* - Jim Barksdale, CEO Netscape

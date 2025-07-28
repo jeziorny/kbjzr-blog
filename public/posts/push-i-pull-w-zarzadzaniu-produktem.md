@@ -1,3 +1,7 @@
+---
+title: "Push i pull w zarządzaniu produktem"
+date: "2024-07-27T10:00:00.000Z"
+---
 # Push i pull w zarządzaniu produktem
 
 Jeden z toksycznych zakątków pracy produktowej w trybie (pseudo) *data driven*, to opieranie się w całości i WYŁĄCZNIE na feedbacku jakościowym użytkowników lub klientów.

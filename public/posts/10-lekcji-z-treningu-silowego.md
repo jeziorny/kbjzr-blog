@@ -1,3 +1,7 @@
+---
+title: "10 lekcji z treningu siłowego"
+date: "2024-07-27T10:00:00.000Z"
+---
 # 10 lekcji z treningu siłowego
 
 Może wielkim chłopem nie zostanę, ale dźwiganie ciężkich przedmiotów nauczyło mnie paru rzeczy:

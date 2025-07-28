@@ -1,3 +1,8 @@
+
+---
+title: "102 cytaty Charliego Mungera po polsku"
+date: "2024-07-27T10:00:00.000Z"
+---
 # 102 cytaty Charliego Mungera po polsku
 
 Na 30 dni przed swoimi setnymi urodzinami zmarł Charlie Munger, wiceprezes Berkshire Hathaway i człowiek, który poza olbrzymim majątkiem zostawił po sobie także dzieło, zbiór mądrych wypowiedzi.

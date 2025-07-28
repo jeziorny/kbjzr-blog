@@ -1,3 +1,7 @@
+---
+title: "Blogi, tęsknię za nimi"
+date: "2024-07-27T10:00:00.000Z"
+---
 # Blogi, tęsknię za nimi
 
 Kocham zjawisko blogowania epoki [Web 2.0.](https://pl.wikipedia.org/wiki/Web_2.0)
@@ -37,7 +41,7 @@ Bardzo długo też chciałem mieć blogaska właśnie tego rodzaju ale się troc
 
 W końcu dorosłem i postanowiłem sobie takie miejsce założyć - i tak tu trafiliśmy, Ty i ja, czytelniku czy czytelniczko.
 
-Będę tu publikował notatki. Głównie dotyczące technologicznego biznesu i głównie moich o nim przemyśleń. Czasem z doświadczeń z prowadzenia takiego.
+Będę tu publikował notatki. Głównie dotyczące technologicznego biznesu i głównie moich o nim przemyśleniach. Czasem z doświadczeń z prowadzenia takiego.
 
 Nie obiecuję regularności.
 
