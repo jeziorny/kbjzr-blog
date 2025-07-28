@@ -47,18 +47,20 @@ export const BlogPost = ({ title, excerpt, date, href, featured = false }: BlogP
       )}
       
       {/* Decorative element */}
-      <div className={`
-        w-full h-1 mt-4 transform group-hover:scale-x-110 transition-transform duration-150
-        ${featured ? 'bg-brutal-yellow' : 'bg-brutal-green'}
-      `} />
+      <div className="overflow-hidden">
+        <div className={`
+          w-full h-1 mt-4 transition-transform duration-150
+          ${featured ? 'bg-brutal-yellow' : 'bg-brutal-green'}
+        `} />
+      </div>
     </div>
   );
 
   const commonClasses = `
     ${cardClasses}
     border-4 border-brutal-shadow shadow-brutal 
-    p-6 hover:shadow-brutal-hover hover:transform hover:-translate-x-2 hover:-translate-y-2 
-    transition-all duration-150 cursor-pointer group
+    p-6 hover:shadow-brutal-hover 
+    transition-all duration-150 cursor-pointer group overflow-hidden
     ${featured ? 'animate-glow-pulse' : ''}
     animate-slide-in-brutal block
   `;

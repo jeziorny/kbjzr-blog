@@ -102,7 +102,7 @@ const Index = () => {
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Blog posts */}
           <div className="lg:col-span-3">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6">
               {blogPosts.map((post, index) => (
                 <BlogPost
                   key={index}
