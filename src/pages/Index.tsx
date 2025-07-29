@@ -2,91 +2,51 @@ import { Helmet } from "react-helmet-async";
 import { BlogHeader } from "@/components/BlogHeader";
 import { BlogPost } from "@/components/BlogPost";
 import { AuthorCard } from "@/components/AuthorCard";
-
-const blogPosts = [
-  {
-    title: "Pilność",
-    href: "/posts/pilnosc",
-    slug: "pilnosc",
-    featured: true,
-    excerpt: "O tym, dlaczego pilność może być pułapką i jak znajdować właściwe priorytety."
-  },
-  {
-    title: "Prymat działania nad intelektem: inteligencja znaczy mniej niż myślisz",
-    href: "/posts/prymat-dzialania-nad-intelektem-inteligencja-znaczy-mniej-niz-myslisz",
-    slug: "prymat-dzialania-nad-intelektem-inteligencja-znaczy-mniej-niz-myslisz",
-    featured: false,
-    excerpt: "Dlaczego konsekwentne działanie przeważa nad inteligencją w osiąganiu celów."
-  },
-  {
-    title: "Push i pull w zarządzaniu produktem",
-    href: "/posts/push-i-pull-w-zarzadzaniu-produktem",
-    slug: "push-i-pull-w-zarzadzaniu-produktem",
-    excerpt: "Dwa fundamentalne podejścia do zarządzania produktem i kiedy je stosować."
-  },
-  {
-    title: "Blogi, tęsknię za nimi",
-    href: "/posts/blogi-tesknie-za-nimi",
-    slug: "blogi-tesknie-za-nimi",
-    excerpt: "Refleksja o upadku blogowania i powrocie do osobistego pisania."
-  },
-  {
-    title: "AI in The Box: okulary od Meta",
-    href: "/posts/meta-ray-bans",
-    slug: "meta-ray-bans",
-    excerpt: "Analiza okularów Meta Ray-Ban jako przykładu udanego produktu AI."
-  },
-  {
-    title: "Apple Vision Pro",
-    href: "/posts/apple-vision-pro",
-    slug: "apple-vision-pro",
-    excerpt: "Pierwsze wrażenia z najnowszego produktu Apple i przyszłość AR/VR."
-  },
-  {
-    title: "Influencer marketing to loteria",
-    href: "/posts/influencer-marketing-to-loteria",
-    slug: "influencer-marketing-to-loteria",
-    excerpt: "Dlaczego influencer marketing jest nieprzewidywalny i jak z tym radzić."
-  },
-  {
-    title: "Screenless i hardware jako klient AI. O Humane AI Pin.",
-    href: "/posts/screenless-i-hardware-jako-klient-ai-o-humane-ai-pin",
-    slug: "screenless-i-hardware-jako-klient-ai-o-humane-ai-pin",
-    excerpt: "Analiza Humane AI Pin i przyszłości urządzeń bez ekranów."
-  },
-  {
-    title: "10 lekcji z treningu siłowego",
-    href: "/posts/10-lekcji-z-treningu-silowego",
-    slug: "10-lekcji-z-treningu-silowego",
-    excerpt: "Czego nauczył mnie trening siłowy o konsekwencji, cierpliwości i wytrwałości."
-  },
-  {
-    title: "102 cytaty Charliego Mungera po polsku",
-    href: "/posts/cytaty-charliego-mungera-po-polsku",
-    slug: "cytaty-charliego-mungera-po-polsku",
-    excerpt: "Najlepsze cytaty Charliego Mungera przetłumaczone na język polski."
-  },
-  {
-    title: "Tak zwany \"europejski pesymizm\" w technologii",
-    href: "/posts/tak-zwany-europejski-pesymizm-w-technologii",
-    slug: "tak-zwany-europejski-pesymizm-w-technologii",
-    excerpt: "O różnicach w podejściu do technologii między Europą a Stanami Zjednoczonymi."
-  },
-  {
-    title: "Chcesz wygrać czy być mądrzejszy?",
-    href: "/posts/chcesz-wygrac-czy-byc-madrzejszy",
-    slug: "chcesz-wygrac-czy-byc-madrzejszy",
-    excerpt: "O dylemacie między konkurowaniem a uczeniem się w biznesie."
-  },
-  {
-    title: "Zarządzanie produktem: startup vs. duża organizacja",
-    href: "/posts/zarzadzanie-produktem-startup-vs-duza-organizacja",
-    slug: "zarzadzanie-produktem-startup-vs-duza-organizacja",
-    excerpt: "Kluczowe różnice w zarządzaniu produktem w startupach i dużych firmach."
-  }
-];
+import { useTina } from "tinacms/dist/react";
+import client from "../tina/__generated__/client";
 
 const Index = () => {
+  const { data, loading } = useTina({
+    query: `{ postConnection { edges { node { id title slug featured excerpt } } } }`,
+    variables: {},
+  });
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background font-brutal">
+        <BlogHeader />
+        <main className="container mx-auto px-4 pt-8 pb-12">
+          <div className="max-w-4xl mx-auto text-center py-16">
+            <div className="bg-brutal-green border-4 border-brutal-shadow shadow-brutal p-8">
+              <h1 className="font-brutal font-black text-3xl text-brutal-shadow">
+                ŁADOWANIE...
+              </h1>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  if (!data || !data.postConnection) {
+    return (
+      <div className="min-h-screen bg-background font-brutal">
+        <BlogHeader />
+        <main className="container mx-auto px-4 pt-8 pb-12">
+          <div className="max-w-4xl mx-auto text-center py-16">
+            <div className="bg-brutal-pink border-4 border-brutal-shadow shadow-brutal p-8">
+              <h1 className="font-brutal font-black text-3xl text-white mb-4">
+                BŁĄD ŁADOWANIA POSTÓW
+              </h1>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  const blogPosts = data.postConnection.edges.map((edge) => edge.node);
+
   return (
     <>
       <Helmet>
@@ -103,11 +63,11 @@ const Index = () => {
           {/* Blog posts */}
           <div className="lg:col-span-3">
             <div className="grid grid-cols-1 gap-6">
-              {blogPosts.map((post, index) => (
+              {blogPosts.map((post) => (
                 <BlogPost
-                  key={index}
+                  key={post.id}
                   title={post.title}
-                  href={post.href}
+                  href={`/posts/${post.slug}`}
                   featured={post.featured}
                 />
               ))}

@@ -1,91 +1,19 @@
-import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { BlogHeader } from "@/components/BlogHeader";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
 import Markdown from "markdown-to-jsx";
-
-interface PostData {
-  title: string;
-  date: string;
-  excerpt: string;
-  tags: string[];
-  content: string;
-}
+import { useTina } from "tinacms/dist/react";
+import client from "../tina/__generated__/client";
 
 const Post = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<PostData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const loadPost = async () => {
-      if (!slug) {
-        setError("Nie znaleziono posta");
-        setLoading(false);
-        return;
-      }
-
-      try {
-        // Load post metadata
-        const metaResponse = await fetch('/posts-meta.json');
-        const metadata = await metaResponse.json();
-        const postMeta = metadata.posts.find((p: any) => p.slug === slug);
-        
-        if (!postMeta) {
-          setError("Post nie został znaleziony");
-          setLoading(false);
-          return;
-        }
-
-        // Load post content
-        const contentResponse = await fetch(`/${postMeta.file}`);
-        const rawContent = await contentResponse.text();
-        
-        // Simple frontmatter parser
-        const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
-        const match = rawContent.match(frontmatterRegex);
-        
-        if (match) {
-          const frontmatter = match[1];
-          const content = match[2];
-          
-          // Parse frontmatter
-          const meta: any = {};
-          frontmatter.split('\n').forEach(line => {
-            const [key, ...valueParts] = line.split(':');
-            if (key && valueParts.length > 0) {
-              const value = valueParts.join(':').trim().replace(/^["']|["']$/g, '');
-              if (key.trim() === 'tags') {
-                meta[key.trim()] = value.replace(/[\[\]]/g, '').split(',').map((tag: string) => tag.trim().replace(/["']/g, ''));
-              } else {
-                meta[key.trim()] = value;
-              }
-            }
-          });
-          
-          setPost({
-            title: meta.title || postMeta.title,
-            date: meta.date || postMeta.date,
-            excerpt: meta.excerpt || postMeta.excerpt,
-            tags: meta.tags || postMeta.tags,
-            content: content
-          });
-        } else {
-          setError("Błąd parsowania posta");
-        }
-      } catch (err) {
-        setError("Błąd ładowania posta");
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadPost();
-  }, [slug]);
+  const { data, query, variables, loading } = useTina({
+    query: `{ post(relativePath: "${slug}.md") { title date excerpt tags featured body } }`,
+    variables: {},
+  });
 
   if (loading) {
     return (
@@ -104,7 +32,7 @@ const Post = () => {
     );
   }
 
-  if (error || !post) {
+  if (!data || !data.post) {
     return (
       <div className="min-h-screen bg-background font-brutal">
         <BlogHeader />
@@ -126,6 +54,8 @@ const Post = () => {
     );
   }
 
+  const post = data.post;
+
   return (
     <>
       <Helmet>
@@ -138,7 +68,7 @@ const Post = () => {
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content="Jakub Jeziorny" />
         <meta property="article:section" content="Technologia" />
-        {post.tags.map(tag => (
+        {post.tags && post.tags.map(tag => (
           <meta key={tag} property="article:tag" content={tag} />
         ))}
         <link rel="canonical" href={`https://kbjzr.pl/posts/${slug}`} />
@@ -165,7 +95,7 @@ const Post = () => {
               "@id": `https://kbjzr.pl/posts/${slug}`
             },
             "url": `https://kbjzr.pl/posts/${slug}`,
-            "keywords": post.tags.join(", "),
+            "keywords": post.tags ? post.tags.join(", ") : "",
             "inLanguage": "pl-PL"
           })}
         </script>
@@ -204,7 +134,7 @@ const Post = () => {
                     day: 'numeric'
                   })}
                 </time>
-                {post.tags.length > 0 && (
+                {post.tags && post.tags.length > 0 && (
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
                     {post.tags.map(tag => (
                       <span 
@@ -263,7 +193,7 @@ const Post = () => {
                     }
                   }}
                 >
-                  {post.content}
+                  {post.body}
                 </Markdown>
               </div>
             </div>

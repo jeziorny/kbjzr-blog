@@ -3,37 +3,25 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: "/",
-  server: {
-    host: "::",
-    port: 8080,
-  },
+export default defineConfig({
   plugins: [
     react(),
   ],
+  server: {
+    host: "0.0.0.0",
+    port: 8080,
+    proxy: {
+      '/graphql': {
+        target: 'http://localhost:4001',
+        changeOrigin: true,
+        secure: false,
+        ws: true, // Enable WebSocket proxying
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    outDir: "dist",
-    assetsDir: "assets",
-    sourcemap: false,
-    // Ensure proper asset handling for GitHub Pages
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-        },
-        // Use legacy format for better GitHub Pages compatibility
-        format: 'es',
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
-      },
-    },
-  },
-}));
+});
