@@ -3,17 +3,35 @@ import { Helmet } from "react-helmet-async";
 import { BlogHeader } from "@/components/BlogHeader";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
-import Markdown from "markdown-to-jsx";
-import { useTina } from "tinacms/dist/react";
-import client from "../tina/__generated__/client";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { useState, useEffect } from "react";
+import client from "../../tina/__generated__/client";
 
 const Post = () => {
   const { slug } = useParams<{ slug: string }>();
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const { data, query, variables, loading } = useTina({
-    query: `{ post(relativePath: "${slug}.md") { title date excerpt tags featured body } }`,
-    variables: {},
-  });
+  // Direct client call instead of useTina (which has DataCloneError)
+  useEffect(() => {
+    if (!slug) return;
+    
+    console.log(`🚀 Loading post: ${slug}`);
+    
+    client.request({
+      query: `{ post(relativePath: "${slug}.md") { title date excerpt tags featured body } }`,
+      variables: {}
+    }).then((result) => {
+      console.log('✅ Post loaded successfully:', result);
+      setData(result);
+      setLoading(false);
+    }).catch((err) => {
+      console.error('❌ Failed to load post:', err);
+      setError(err);
+      setLoading(false);
+    });
+  }, [slug]);
 
   if (loading) {
     return (
@@ -32,7 +50,25 @@ const Post = () => {
     );
   }
 
-  if (!data || !data.post) {
+  if (error) {
+    return (
+      <div className="min-h-screen bg-background font-brutal">
+        <BlogHeader />
+        <main className="container mx-auto px-4 pt-8 pb-12">
+          <div className="max-w-4xl mx-auto text-center py-16">
+            <div className="bg-red-500 border-4 border-brutal-shadow shadow-brutal p-8">
+              <h1 className="font-brutal font-black text-3xl text-white mb-4">
+                BŁĄD TINACMS
+              </h1>
+              <p className="text-white text-sm">{error.message || String(error)}</p>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  if (!data || !data.data || !data.data.post) {
     return (
       <div className="min-h-screen bg-background font-brutal">
         <BlogHeader />
@@ -54,7 +90,7 @@ const Post = () => {
     );
   }
 
-  const post = data.post;
+  const post = data.data.post;
 
   return (
     <>
@@ -152,49 +188,23 @@ const Post = () => {
             {/* Content */}
             <div className="bg-white p-8 lg:p-12 border-4 border-brutal-shadow shadow-brutal mb-8">
               <div className="prose prose-xl max-w-none prose-headings:font-brutal prose-headings:font-black prose-headings:text-brutal-shadow prose-p:text-xl prose-p:text-brutal-shadow prose-p:font-medium prose-p:leading-relaxed prose-p:mb-8 prose-strong:font-black prose-em:font-bold prose-a:text-brutal-blue prose-a:font-bold prose-a:underline hover:prose-a:text-brutal-green">
-                <Markdown
-                  options={{
-                    overrides: {
-                      h1: {
-                        props: {
-                          className: "font-brutal font-black text-4xl text-brutal-shadow mb-8 uppercase tracking-tight"
-                        }
-                      },
-                      h2: {
-                        props: {
-                          className: "font-brutal font-black text-3xl text-brutal-shadow mb-6 mt-12 uppercase tracking-tight"
-                        }
-                      },
-                      h3: {
-                        props: {
-                          className: "font-brutal font-black text-2xl text-brutal-shadow mb-4 mt-8 uppercase tracking-tight"
-                        }
-                      },
-                      p: {
-                        props: {
-                          className: "text-xl text-brutal-shadow font-medium leading-relaxed mb-8"
-                        }
-                      },
-                      blockquote: {
-                        props: {
-                          className: "border-l-8 border-brutal-green bg-gray-50 p-6 my-12 not-italic"
-                        }
-                      },
-                      strong: {
-                        props: {
-                          className: "font-black"
-                        }
-                      },
-                      em: {
-                        props: {
-                          className: "font-bold italic"
-                        }
-                      }
-                    }
+                <TinaMarkdown 
+                  content={post.body} 
+                  components={{
+                    h1: () => null, // Hide h1 in content since we show title in header
+                    h2: (props) => <h2 className="font-brutal font-black text-3xl text-brutal-shadow mb-6 mt-12 uppercase tracking-tight" {...props} />,
+                    h3: (props) => <h3 className="font-brutal font-black text-2xl text-brutal-shadow mb-4 mt-8 uppercase tracking-tight" {...props} />,
+                    p: (props) => <p className="text-xl text-brutal-shadow font-medium leading-relaxed mb-8" {...props} />,
+                    blockquote: (props) => <blockquote className="border-l-8 border-brutal-green bg-gray-50 p-6 my-12 not-italic" {...props} />,
+                    strong: (props) => <strong className="font-black" {...props} />,
+                    em: (props) => <em className="font-bold italic" {...props} />,
+                    a: (props) => <a className="text-brutal-blue font-bold underline hover:text-brutal-green" {...props} />,
+                    ol: (props) => <ol className="mb-8" {...props} />,
+                    ul: (props) => <ul className="mb-8" {...props} />,
+                    li: (props) => <li className="text-xl text-brutal-shadow font-medium leading-relaxed mb-4" {...props} />,
+                    lic: (props) => <span className="text-xl text-brutal-shadow font-medium leading-relaxed" {...props} />,
                   }}
-                >
-                  {post.body}
-                </Markdown>
+                />
               </div>
             </div>
 

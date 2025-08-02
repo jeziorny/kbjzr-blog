@@ -8,8 +8,8 @@ const branch =
 
 export default defineConfig({
   branch,
-  clientId: null, // Wprowadzimy później, jeśli będzie potrzebne
-  token: null, // Wprowadzimy później, jeśli będzie potrzebne
+  clientId: process.env.TINA_CLIENT_ID || null,
+  token: process.env.TINA_TOKEN || null,
   build: {
     outputFolder: "admin",
     publicFolder: "public",
@@ -25,7 +25,7 @@ export default defineConfig({
       {
         name: "post",
         label: "Posty",
-        path: "public/posts", // Poprawna ścieżka do postów
+        path: "content/posts", // Poprawna ścieżka do postów
         fields: [
           {
             type: "string",

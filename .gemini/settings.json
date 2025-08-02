@@ -1,10 +1,4 @@
 {
   "theme": "Shades Of Purple",
-  "selectedAuthType": "oauth-personal",
-  "mcpServers": {
-    "smitheryBrowser": {
-      "httpUrl": "https://smithery.ai/server/@bytedance/mcp-server-browser/mcp",
-      "timeout": 10000
-    }
-  }
+  "selectedAuthType": "oauth-personal"
 }

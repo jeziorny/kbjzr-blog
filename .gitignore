@@ -66,4 +66,11 @@ dev-debug.log
 tasks.json
 tasks/ 
 
+# TinaCMS
+.tina/__generated__/_schema.json
+.tina/__generated__/_lookup.json
+.tina/database.db
+.tina/assets/
+
+# Duplicate entry cleanup
 node_modules

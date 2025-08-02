@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [
     react(),
   ],
@@ -17,7 +18,17 @@ export default defineConfig({
         secure: false,
         ws: true, // Enable WebSocket proxying
       },
+      '/admin': {
+        target: 'http://localhost:4001',
+        changeOrigin: true,
+        secure: false,
+      },
     },
+  },
+  preview: {
+    // For SPA routing in preview mode
+    host: "0.0.0.0",
+    port: 8080,
   },
   resolve: {
     alias: {
