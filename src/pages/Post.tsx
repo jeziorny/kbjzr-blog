@@ -155,14 +155,14 @@ const Post = () => {
           {/* Article */}
           <article className="max-w-4xl mx-auto">
             {/* Title */}
-            <header className="mb-12 bg-brutal-blue p-12 border-4 border-brutal-shadow shadow-brutal">
-              <h1 className="font-brutal font-black text-3xl lg:text-5xl text-white leading-tight text-center transform -rotate-1">
+            <header className="mb-8 bg-brutal-blue p-6 lg:p-8 border-4 border-brutal-shadow shadow-brutal">
+              <h1 className="font-brutal font-black text-2xl lg:text-4xl text-white leading-tight text-center transform -rotate-1">
                 {post.title.toUpperCase()}
               </h1>
-              <div className="w-32 h-2 bg-brutal-yellow mx-auto mt-6 transform rotate-2" />
+              <div className="w-24 h-1 bg-brutal-yellow mx-auto mt-4 transform rotate-2" />
               
               {/* Post meta */}
-              <div className="mt-8 text-center">
+              <div className="mt-6 text-center">
                 <time className="text-white font-brutal font-medium text-lg">
                   {new Date(post.date).toLocaleDateString('pl-PL', {
                     year: 'numeric',
