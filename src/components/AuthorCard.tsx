@@ -27,7 +27,7 @@ export const AuthorCard = () => {
         <Button 
           variant="outline"
           className="w-full bg-brutal-blue text-white border-2 border-brutal-shadow shadow-brutal font-brutal font-bold hover:bg-brutal-pink hover:shadow-brutal-hover hover:transform hover:-translate-x-1 hover:-translate-y-1 transition-all duration-150"
-          onClick={() => window.open('#', '_blank')}
+          onClick={() => window.open('https://www.linkedin.com/in/jakubjeziorny/', '_blank')}
         >
           <Linkedin className="h-4 w-4 mr-2" />
           LinkedIn
