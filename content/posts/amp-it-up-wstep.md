@@ -1,5 +1,5 @@
 ---
-title: ""Apm It Up - wstęp do polskiego wydania""
+title: "Apm It Up - wstęp do polskiego wydania"
 date: "2025-10-20T10:00:00.000Z"
 ---
 # "Apm It Up - wstęp do polskiego wydania
