@@ -7,7 +7,7 @@ tags:
   - zarządzanie
   - produktywność
   - leadership
-featured: true
+featured: false
 ---
 
 # Pilność
