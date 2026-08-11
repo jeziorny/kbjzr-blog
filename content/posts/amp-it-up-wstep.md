@@ -1,7 +1,7 @@
 ---
 title: "Amp It Up - wstęp do polskiego wydania"
 date: "2025-10-20T10:00:00.000Z"
-featured: true
+featured: false
 ---
 # "Amp It Up" - wstęp do polskiego wydania
 
