@@ -1,0 +1,4 @@
+# Keep essential files for GitHub Actions build
+__generated__/*
+!__generated__/client.ts
+!__generated__/types.ts

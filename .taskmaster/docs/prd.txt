@@ -1,0 +1,100 @@
+# PRD: Rozwiązanie problemu z białym ekranem w aplikacji React
+
+## Przegląd
+Aplikacja React (kbjzr-blog) wyświetla biały ekran zamiast zawartości. Problem wymaga systematycznej diagnostyki i naprawy, aby przywrócić funkcjonalność aplikacji i umożliwić dalszy rozwój.
+
+## Cele
+- Zdiagnozować przyczynę białego ekranu
+- Naprawić problem z renderowaniem aplikacji
+- Przywrócić pełną funkcjonalność
+- Zaimplementować zabezpieczenia na przyszłość
+- Umożliwić bezproblemowy rozwój kodu
+
+## Zakres
+### Włączone:
+- Diagnostyka problemu z białym ekranem
+- Naprawa błędów w komponentach React
+- Optymalizacja error handling
+- Dodanie Error Boundaries
+- Dokumentacja procesu naprawy
+
+### Wyłączone:
+- Zmiany w designie/UI
+- Dodawanie nowych funkcjonalności
+- Refaktoryzacja istniejącego kodu (poza naprawą błędów)
+
+## Użytkownicy
+- Developerzy pracujący nad projektem
+- Użytkownicy końcowi bloga
+
+## Wymagania funkcjonalne
+
+### FAZA 1: DIAGNOSTYKA
+- Sprawdzenie konsoli przeglądarki pod kątem błędów JavaScript
+- Dodanie console.log w kluczowych komponentach (App.tsx, Index.tsx, BlogHeader.tsx)
+- Sprawdzenie logów Vite w terminalu
+- Analiza Network tab w DevTools
+
+### FAZA 2: IZOLACJA PROBLEMU
+- Tymczasowe uproszczenie komponentu BlogHeader.tsx
+- Testowanie renderowania z uproszczonymi komponentami
+- Identyfikacja konkretnego błędu powodującego crash
+- Stopniowe przywracanie funkcjonalności
+
+### FAZA 3: NAPRAWA
+- Naprawienie zidentyfikowanego błędu w komponencie
+- Dodanie error handling w kluczowych miejscach
+- Przywrócenie pełnej funkcjonalności formularza newslettera
+- Weryfikacja działania wszystkich komponentów
+
+### FAZA 4: WERYFIKACJA
+- Testowanie podstawowej funkcjonalności (ładowanie strony, routing)
+- Sprawdzenie responsywności
+- Testowanie edge cases
+- Weryfikacja działania w różnych przeglądarkach
+
+### FAZA 5: OPTYMALIZACJA
+- Implementacja Error Boundaries
+- Dodanie loading states
+- Lepsze error handling w całej aplikacji
+- Dokumentacja procesu i znanych problemów
+
+## Wymagania niefunkcjonalne
+- Czas wykonania: maksymalnie 2 godziny
+- Bezpieczeństwo: nie uszkodzić istniejącego kodu
+- Prostość: krok po kroku, łatwe do wykonania
+- Skuteczność: całkowite rozwiązanie problemu
+- Przyszłościowość: zabezpieczenia na przyszłość
+
+## Kryteria sukcesu
+- Aplikacja ładuje się bez białego ekranu
+- Wszystkie komponenty renderują się poprawnie
+- Routing działa bez problemów
+- Formularz newslettera funkcjonuje
+- Brak błędów w konsoli przeglądarki
+- Dodane Error Boundaries zapobiegają przyszłym crashom
+- Dokumentacja procesu naprawy
+
+## Ograniczenia
+- Nie zmieniać designu/UI
+- Nie dodawać nowych funkcjonalności
+- Zachować istniejącą strukturę projektu
+- Minimalne zmiany w kodzie
+
+## Ryzyka
+- Problem może być bardziej złożony niż oczekiwano
+- Naprawa może wprowadzić nowe błędy
+- Może być konieczna refaktoryzacja większej części kodu
+
+## Plan wdrożenia
+1. FAZA 1: Diagnostyka (5-10 min)
+2. FAZA 2: Izolacja problemu (10-15 min)
+3. FAZA 3: Naprawa (15-30 min)
+4. FAZA 4: Weryfikacja (5-10 min)
+5. FAZA 5: Optymalizacja (opcjonalnie)
+
+## Metryki
+- Czas do rozwiązania problemu
+- Liczba błędów w konsoli (przed vs po)
+- Czas ładowania strony
+- Liczba crashów aplikacji 
