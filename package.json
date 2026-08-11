@@ -6,6 +6,7 @@
   "description": "KBJZR Blog - React version with brutal design system",
   "homepage": "https://kbjzr.pl",
   "scripts": {
+    "predev": "node scripts/generate-posts-meta.cjs",
     "dev": "vite",
     "build": "node scripts/generate-posts-meta.cjs && vite build",
     "build:dev": "vite build --mode development",
