@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Markdown from "markdown-to-jsx";
 import { Link, useParams } from "react-router-dom";
+import { AuthorCard } from "@/components/AuthorCard";
 import { BlogHeader } from "@/components/BlogHeader";
 
 interface PostData {
@@ -42,7 +43,10 @@ const Post = () => {
     return (
       <div className="site-page">
         <BlogHeader />
-        <main className="site-frame site-main"><p className="page-message article">{error.message} <Link to="/">Wróć do wpisów.</Link></p></main>
+        <main className="site-frame site-main">
+          <p className="page-message article">{error.message} <Link to="/">Wróć do wpisów.</Link></p>
+          <AuthorCard />
+        </main>
       </div>
     );
   }
@@ -51,7 +55,10 @@ const Post = () => {
     return (
       <div className="site-page">
         <BlogHeader />
-        <main className="site-frame site-main"><p className="page-message article">Wczytywanie wpisu…</p></main>
+        <main className="site-frame site-main">
+          <p className="page-message article">Wczytywanie wpisu…</p>
+          <AuthorCard />
+        </main>
       </div>
     );
   }
@@ -76,7 +83,6 @@ const Post = () => {
         <BlogHeader />
         <main className="site-frame site-main">
           <article className="article">
-            <Link className="back-link" to="/">Wróć do wpisów</Link>
             <header className="article-header">
               <time dateTime={post.date}>{displayDate}</time>
               {tags.length > 0 && <span className="article-tags">{tags.join(", ")}</span>}
@@ -90,6 +96,7 @@ const Post = () => {
               <Link to="/">Wróć do wpisów</Link>
             </footer>
           </article>
+          <AuthorCard />
         </main>
         <footer className="site-footer">KBJZR · 2026</footer>
       </div>
