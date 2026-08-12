@@ -198,18 +198,18 @@ button, input { font: inherit; }
   letter-spacing: -0.045em;
 }
 
-.article-body { max-width: 41rem; font-size: 16px; line-height: 1.58; }
+.article-body { max-width: 41rem; font-size: 17px; line-height: 1.58; }
 .article-body > :first-child { margin-top: 0; }
 .article-body p, .article-body ul, .article-body ol { margin: 0 0 1.15em; }
 .article-body ul, .article-body ol { padding-left: 1.35em; }
 .article-body li + li { margin-top: 0.28em; }
 .article-body h2, .article-body h3, .article-body h4 {
   margin: 2em 0 0.55em;
-  font-size: 20px;
+  font-size: 21px;
   line-height: 1.25;
   letter-spacing: -0.02em;
 }
-.article-body h3, .article-body h4 { font-size: 17px; }
+.article-body h3, .article-body h4 { font-size: 18px; }
 .article-body blockquote {
   margin: 1.5em 0;
   padding-left: 1.15em;
@@ -272,6 +272,7 @@ button, input { font: inherit; }
   }
 
   .author-note { margin-top: 42px; }
+  .article { transform: translateX(max(0px, calc((100vw - 1200px) / 2))); }
 }
 
 @media (max-width: 1110px) {
@@ -293,8 +294,8 @@ button, input { font: inherit; }
   .post-row { grid-template-columns: 1fr; gap: 3px; padding: 8px 0; }
   .post-row time { font-size: 12px; }
   .article-header { margin-bottom: 28px; }
-  .article-body { font-size: 16px; line-height: 1.58; }
-  .article-body h2 { font-size: 20px; }
+  .article-body { font-size: 17px; line-height: 1.58; }
+  .article-body h2 { font-size: 21px; }
   .site-footer { width: min(100% - 40px, 640px); padding: 24px 0 30px; }
   .newsletter-form { position: static; width: min(100% - 40px, 640px); margin: 22px auto 0; }
 }
